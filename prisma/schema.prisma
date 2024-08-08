@@ -40,9 +40,9 @@ model Curso{
   descricao   String
   data_inicio DateTime @default(now())
   data_fim    DateTime 
-  aluno_id    Int
+  aluno_id    Int?
   instrutorId Int
-  aluno       Aluno @relation(fields: [aluno_id], references: [id])
+  aluno       Aluno? @relation(fields: [aluno_id], references: [id])
   instrutor   Instrutor @relation(fields: [instrutorId], references: [id])
 
   @@map("cursos")
