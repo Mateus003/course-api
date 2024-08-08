@@ -43,7 +43,7 @@ model Curso{
   aluno_id    Int?
   instrutorId Int
   aluno       Aluno? @relation(fields: [aluno_id], references: [id])
-  instrutor   Instrutor @relation(fields: [instrutorId], references: [id])
+  instrutor   Instrutor @relation(fields: [instrutorId], references: [id], onDelete: Cascade)
 
   @@map("cursos")
 }
