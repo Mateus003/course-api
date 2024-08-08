@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import Student from "../services/student";
-import { empty } from "@prisma/client/runtime/library";
 
 class StudentController{
     static async createStudent(req: Request, res:Response){
